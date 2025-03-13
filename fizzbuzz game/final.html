@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FizzBuzz Game</title>
+  <!-- Link to the external CSS file -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="popup-container3">
+    <h1>Game Over</h1>
+    <p>Your Score: <span id="score"></span></p>
+    <p>High Score: <span id="highScore"></span></p>
+    <a class ="back-btn" href="index.html">Back to Start</a>
+  </div>
+
+  <script>
+    // Get score and high score from localStorage
+    const score = localStorage.getItem('score');
+    const highScore = localStorage.getItem('highScore');
+
+    // Display score and high score
+    document.getElementById('score').textContent = score || 0;
+    document.getElementById('highScore').textContent = highScore || 0;
+
+    // Clear the score from localStorage after displaying it
+    localStorage.removeItem('score');
+  </script>
+</body>
+
+</html>
+
